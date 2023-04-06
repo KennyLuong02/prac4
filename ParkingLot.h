@@ -15,15 +15,13 @@ class ParkingLot {
         ParkingLot(int cap);
         
         //
-        Vehicle *vehicles;
-        ParkingLot(Vehicle *vehicles);
+        Vehicle **vehicles;
 
         int getCount();
-        bool parkVehicle(int ID); /*, time_t timeOfEntry);*/
+        bool parkVehicle(Vehicle *ptr); /*, time_t timeOfEntry);*/
         bool unparkVehicle(int ID);
 
         //
-        int maxParkingDuration();
         int countOverstayingVehicle(int maxParkingDuration);
 
 };
