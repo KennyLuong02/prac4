@@ -2,33 +2,76 @@
 #include <ctime>
 #include "ParkingLot.h"
 #include "Vehicle.h"
+#include "Motorbike.h"
+#include "Bus.h"
+#include "Car.h"
 
 using namespace std;
 
-// class ParkingLot {
-//     private:
-//         int capacity;
-//         int numberOfVehicles;
-// };
-
 //
-ParkingLot::ParkingLot() {};
-
-Parkinglot::ParkingLot(int cap) {
-
+ParkingLot::ParkingLot() {
+    capacity = 0;
+    numberOfVehicles = 0;
 };
 
+Parkinglot::ParkingLot(int cap) {
+    vehicles = new Vehicle[cap];
+    capacity = cap;
+    numberOfVehicles = 0;
+};
+
+//
 ParkingLot::ParkingLot(Vehicle *vehicles) {
 
 };
 
-int ParkingLot::getCount();
+bool ParkingLot::unparkVehicle(int ID) {
+    for(int i = 0; i < numberOfVehicles; i++) {
+        if (vehicles[i].getID() == ID) {
+            vehicles[i] = 0;
 
-bool ParkingLot::parkVehicle(int ID); /*, time_t timeOfEntry);*/
+            //
 
-bool ParkingLot::unparkVehicle(int ID);
+            numberOfVehicles--;
+        }
+    } else {
+        return false;
+    }
+
+    return true;
+};
 
 //
 int ParkingLot::maxParkingDuration();
 
-int ParkingLot::countOverstayingVehicle(int maxParkingDuration);
+int ParkingLot::countOverstayingVehicle(int maxParkingDuration) {
+    int counter = 0;
+
+    for(int i = 0; i < numberOfVehicles; i++) {
+        if (vehicles[i].getParkingDuration > maxParkingDuration) {
+            counter++;
+        }
+    }
+};
+
+
+
+
+
+
+
+
+int ParkingLot::getCount() {
+    return numberOfVehicles;
+};
+
+bool ParkingLot::parkVehicle(int ID) {
+    if (numberOfVehicles < capacity) {
+        vehicles[numberOfVehicles] = Vehicle(ID);
+        return true;
+    } else {
+        return false;
+    }
+
+};
+

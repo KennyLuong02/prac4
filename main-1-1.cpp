@@ -2,7 +2,7 @@
 #include <string>
 #include <math.h>
 #include <ctime>
-#include "Vehical.h"
+#include "Vehicle.h"
 
 using namespace std;
 
