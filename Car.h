@@ -1,6 +1,6 @@
 #include <string>
 #include <ctime>
-#include "Vehical.h"
+#include "Vehicle.h"
 
 using namespace std;
 

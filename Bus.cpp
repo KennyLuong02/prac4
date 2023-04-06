@@ -1,7 +1,7 @@
 #include <string>
 #include <math.h>
 #include <ctime>
-#include "Vehical.h"
+#include "Vehicle.h"
 #include "Bus.h"
 
 using namespace std;

@@ -1,6 +1,6 @@
 #include <string>
 #include <ctime>
-#include "Vehical.h"
+#include "Vehicle.h"
 
 using namespace std;
 
@@ -12,6 +12,7 @@ class ParkingLot {
     public:
         //
         ParkingLot();
+        ParkingLot(int cap);
         
         //
         Vehicle *vehicles;

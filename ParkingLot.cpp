@@ -1,7 +1,7 @@
 #include <string>
 #include <ctime>
 #include "ParkingLot.h"
-#include "Vehical.h"
+#include "Vehicle.h"
 
 using namespace std;
 
@@ -13,6 +13,10 @@ using namespace std;
 
 //
 ParkingLot::ParkingLot() {};
+
+Parkinglot::ParkingLot(int cap) {
+
+};
 
 ParkingLot::ParkingLot(Vehicle *vehicles) {
 
