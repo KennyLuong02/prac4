@@ -12,19 +12,17 @@ class ParkingLot {
         int numberOfVehicles;
 
     public:
-        //
         ParkingLot();
         ParkingLot(int cap);
         
-        //
-        Vehicle **vehicles;
-
-        int getCount();
         bool parkVehicle(Vehicle *ptr);
         bool unparkVehicle(int ID);
 
-        //
         int countOverstayingVehicle(int maxParkingDuration);
+
+        int getCount();
+
+        Vehicle **vehicles;
 
 };
 #endif

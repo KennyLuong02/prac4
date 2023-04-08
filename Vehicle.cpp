@@ -16,6 +16,10 @@ Vehicle::Vehicle(int ID) {
 
 }
 
+Vehicle::~Vehicle() {
+    //
+}
+
 int Vehicle::getID() {
     return ID;
 }
