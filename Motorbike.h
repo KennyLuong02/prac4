@@ -1,3 +1,5 @@
+#ifndef __MOTORBIKE_H__
+#define __MOTORBIKE_H__
 #include <string>
 #include <ctime>
 #include "Vehicle.h"
@@ -15,3 +17,4 @@ class Motorbike: public Vehicle {
         int getParkingDuration();
 
 };
+#endif

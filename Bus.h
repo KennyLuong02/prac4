@@ -1,3 +1,5 @@
+#ifndef __BUS_H__
+#define __BUS_H__
 #include <string>
 #include <ctime>
 #include "Vehicle.h"
@@ -15,3 +17,4 @@ class Bus: public Vehicle {
         int getParkingDuration();
 
 };
+#endif

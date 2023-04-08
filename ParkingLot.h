@@ -1,3 +1,5 @@
+#ifndef __PARKINGLOT_H__
+#define __PARKINGLOT_H__
 #include <string>
 #include <ctime>
 #include "Vehicle.h"
@@ -18,10 +20,11 @@ class ParkingLot {
         Vehicle **vehicles;
 
         int getCount();
-        bool parkVehicle(Vehicle *ptr); /*, time_t timeOfEntry);*/
+        bool parkVehicle(Vehicle *ptr);
         bool unparkVehicle(int ID);
 
         //
         int countOverstayingVehicle(int maxParkingDuration);
 
 };
+#endif

@@ -6,18 +6,13 @@
 
 using namespace std;
 
-Motorbike::Motorbike():Vehicle() {};
+Motorbike::Motorbike():Vehicle() {}
 
-Motorbike::Motorbike(int ID):Vehicle(ID) {};
+Motorbike::Motorbike(int ID):Vehicle(ID) {}
 
 int Motorbike::getParkingDuration() {
-    time_t begin, end;
-
-    begin = getParkingDuration();
-    end = time(&end);
-
-    seconds = difftime(end, begin);
-    timeReturn = seconds - (seconds * 15 / 100);
-    timeReturn = round(timeReturn);
+    time_t currentTime = time(NULL);
+    seconds = difftime(currentTime, timeOfEntry);
+    timeReturn = round(timeReturn * 0.85);
     return timeReturn;
-};
+}
