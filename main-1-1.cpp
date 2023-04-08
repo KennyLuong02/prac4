@@ -25,13 +25,13 @@ int main() {
         cin >> theID;
         if (vehicle == "Car") {
             vehicleArray[i] = new Car(theID);
-            sleep(3);
+            // sleep(3);
         } else if (vehicle == "Bus") {
             vehicleArray[i] = new Bus(theID);
-            sleep(3);
+            // sleep(3);
         } else if (vehicle == "Motorbike") {
             vehicleArray[i] = new Motorbike(theID);
-            sleep(3);
+            // sleep(3);
         }
     }
 

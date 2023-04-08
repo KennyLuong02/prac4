@@ -26,13 +26,13 @@ int main() {
         cin >> theID;
         if (vehicle == "Car") {
             a = parking[i]->parkVehicle(Vehicle *Car(theID)); //issue
-            sleep(3);
+            // sleep(3);
         } else if (vehicle == "Bus") {
             a = parking[i]->parkVehicle(Bus(theID));
-            sleep(3);
+            // sleep(3);
         } else if (vehicle == "Motorbike") {
             a = parking[i]->parkVehicle(Motorbike(theID));
-            sleep(3);
+            // sleep(3);
         }
     }
 
