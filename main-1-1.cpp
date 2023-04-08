@@ -11,6 +11,9 @@
 using namespace std;
 
 int main() {
+    cout << "About to sleep for 1 second" << endl;
+    sleep(1);
+
     int n;
     cout << "How many vehicles do you want to park?" << endl;
     cin >> n;
@@ -33,6 +36,7 @@ int main() {
             vehicleArray[i] = new Motorbike(theID);
             // sleep(3);
         }
+        sleep(3);
     }
 
     for (int i = 0; i < n; i++) {

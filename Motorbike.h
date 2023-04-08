@@ -8,7 +8,7 @@ using namespace std;
 
 class Motorbike: public Vehicle {
     private:
-        int seconds;
+        double seconds;
         int timeReturn;
 
     public:

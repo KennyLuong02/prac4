@@ -60,4 +60,6 @@ bool ParkingLot::parkVehicle(Vehicle * ptr) {
             return false;
         }
     }
+
+    return false;
 }

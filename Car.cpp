@@ -13,6 +13,6 @@ Car::Car(int ID):Vehicle(ID) {}
 int Car::getParkingDuration() {
     time_t currentTime = time(NULL);
     seconds = difftime(currentTime, timeOfEntry);
-    timeReturn = round(timeReturn * 0.9);
+    timeReturn = round(seconds * 0.9);
     return timeReturn;
 }
