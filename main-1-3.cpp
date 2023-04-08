@@ -40,7 +40,7 @@ int main() {
         }
     }
 
-    cout << "The number of overstaying vehicles are: " << parking->countOverstayingVehicle(15) << endl;
+    cout << "The number of overstaying vehicles are: " << parking->countOverstayingVehicles(15) << endl;
 
     return 0;
 }

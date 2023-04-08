@@ -39,7 +39,7 @@ bool ParkingLot::unparkVehicle(int ID) {
     return false;
 }
 
-int ParkingLot::countOverstayingVehicle(int maxParkingDuration) {
+int ParkingLot::countOverstayingVehicles(int maxParkingDuration) {
     int counter = 0;
 
     for(int i = 0; i < capacity; i++) {
