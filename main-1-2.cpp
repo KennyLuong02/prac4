@@ -20,7 +20,6 @@ int main() {
     for (int i = 0; i < n; i++) {
         string vehicle;
         int theID;
-        bool a;
 
         cout << "Please enter your vehicle and ID: ";
         cin >> vehicle;
@@ -47,7 +46,6 @@ int main() {
     }
 
     int theID;
-    bool a;
     cout << "Please enter the vehicle you want to unpark: ";
     cin >> theID;
     parking->unparkVehicle(theID); //problem
