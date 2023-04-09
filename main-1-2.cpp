@@ -12,7 +12,7 @@
 using namespace std;
 
 int main() {
-    int n = 10;
+    int n = 2;
 
     ParkingLot parking[n];
     Vehicle* pTempVehicle = nullptr;
@@ -50,5 +50,7 @@ int main() {
     cin >> theID;
     parking->unparkVehicle(theID); //problem
 
+    parking->~ParkingLot();
+    
     return 0;
 }

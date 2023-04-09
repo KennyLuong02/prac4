@@ -69,3 +69,7 @@ bool ParkingLot::parkVehicle(Vehicle * ptr)
     cout << "The lot is full" << endl;
     return false;
 }
+
+ParkingLot::~ParkingLot() {
+    delete[] vehicles;
+}

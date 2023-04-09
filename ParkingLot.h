@@ -14,6 +14,7 @@ class ParkingLot {
     public:
         ParkingLot();
         ParkingLot(int cap);
+        ~ParkingLot();
         
         bool parkVehicle(Vehicle *ptr);
         bool unparkVehicle(int ID);
