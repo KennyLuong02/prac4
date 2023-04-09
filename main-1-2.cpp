@@ -12,7 +12,7 @@
 using namespace std;
 
 int main() {
-    int n = 2;
+    int n = 10;
 
     ParkingLot parking(2);
     Vehicle* pTempVehicle = nullptr;
