@@ -27,11 +27,13 @@ ParkingLot::ParkingLot(int cap) {
 
 bool ParkingLot::unparkVehicle(int ID) {
     for(int i = 0; i < capacity; i++) {
-        if (vehicles[i]->getID() == ID) {
-            delete vehicles[i];
-            vehicles[i] = nullptr;
-            numberOfVehicles--;
-            return true;
+        if (vehicles[i] != nullptr) {
+            if (vehicles[i]->getID() == ID) {
+                delete vehicles[i];
+                vehicles[i] = nullptr;
+                numberOfVehicles--;
+                return true;
+        }
         }
     }
 
