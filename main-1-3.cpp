@@ -14,7 +14,7 @@ using namespace std;
 int main() {
     int n = 10;
 
-    ParkingLot parking[n];
+    ParkingLot parking(n);
     Vehicle *ptr = nullptr;
 
     for (int i = 0; i < n; i++) {
@@ -27,20 +27,20 @@ int main() {
         cin >> theID;
         if (vehicle == "Car") {
             ptr = new Car[theID];
-            a = parking->parkVehicle(ptr);
+            a = parking.parkVehicle(ptr);
             // sleep(3);
         } else if (vehicle == "Bus") {
             ptr = new Bus[theID];
-            a = parking->parkVehicle(ptr);
+            a = parking.parkVehicle(ptr);
             // sleep(3);
         } else if (vehicle == "Motorbike") {
             ptr = new Motorbike[theID];
-            a = parking->parkVehicle(ptr);
+            a = parking.parkVehicle(ptr);
             // sleep(3);
         }
     }
 
-    cout << "The number of overstaying vehicles are: " << parking->countOverstayingVehicles(15) << endl;
+    cout << "The number of overstaying vehicles are: " << parking.countOverstayingVehicles(15) << endl;
 
     return 0;
 }
