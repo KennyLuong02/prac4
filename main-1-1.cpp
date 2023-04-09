@@ -43,7 +43,7 @@ int main() {
         cout << "The vehicle duration is: " << vehicleArray[i]->getParkingDuration() << endl;
     }
 
-    // delete[] vehicleArray;
+    delete[] vehicleArray;
     
     return 0;
 }

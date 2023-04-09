@@ -50,7 +50,7 @@ int main() {
     cin >> theID;
     parking.unparkVehicle(theID); //problem
 
-    // parking->~ParkingLot();
+    parking.~ParkingLot();
 
     return 0;
 }

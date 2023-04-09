@@ -27,7 +27,9 @@ ParkingLot::ParkingLot(int cap) {
 
 bool ParkingLot::unparkVehicle(int ID) {
     for(int i = 0; i < capacity; i++) {
-        if (vehicles[i] != nullptr) {
+        if (vehicles[i] != nullptr) { // Important
+                                      // Check the pointer is not empty
+                                      // To prevent segmentation fault and empty
             if (vehicles[i]->getID() == ID) {
                 delete vehicles[i];
                 vehicles[i] = nullptr;
