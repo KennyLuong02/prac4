@@ -8,13 +8,13 @@
 #include "Bus.h"
 #include "Motorbike.h"
 #include "ParkingLot.h"
-
+// -Wextra -pedantic
 using namespace std;
 
 int main() {
     int n = 10;
 
-    ParkingLot parking(2);
+    ParkingLot parking(n);
     Vehicle* pTempVehicle = nullptr;
 
     for (int i = 0; i < n; i++) {
