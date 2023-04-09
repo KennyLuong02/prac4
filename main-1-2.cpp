@@ -14,7 +14,7 @@ using namespace std;
 int main() {
     int n = 2;
 
-    ParkingLot parking[n];
+    ParkingLot parking(2);
     Vehicle* pTempVehicle = nullptr;
 
     for (int i = 0; i < n; i++) {
@@ -26,7 +26,7 @@ int main() {
         cin >> theID;
         if (vehicle == "Car") {
             pTempVehicle = new Car(theID);
-            if (parking->parkVehicle(pTempVehicle) == true)
+            if (parking.parkVehicle(pTempVehicle) == true)
             {
                 cout << "Parked Car OK" << endl;
             }
@@ -34,12 +34,12 @@ int main() {
             // sleep(1);
         } else if (vehicle == "Bus") {
             pTempVehicle = new Bus(theID);
-            parking->parkVehicle(pTempVehicle);
+            parking.parkVehicle(pTempVehicle);
             // a = parking[i]->parkVehicle(Bus(theID));
             // sleep(1);
         } else if (vehicle == "Motorbike") {
             pTempVehicle = new Motorbike(theID);
-            parking->parkVehicle(pTempVehicle);
+            parking.parkVehicle(pTempVehicle);
             // a = parking[i]->parkVehicle(Motorbike(theID));
             // sleep(1);
         }
@@ -48,9 +48,9 @@ int main() {
     int theID;
     cout << "Please enter the vehicle you want to unpark: ";
     cin >> theID;
-    parking->unparkVehicle(theID); //problem
+    parking.unparkVehicle(theID); //problem
 
-    parking->~ParkingLot();
-    
+    // parking->~ParkingLot();
+
     return 0;
 }
